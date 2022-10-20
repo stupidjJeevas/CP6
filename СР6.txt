@@ -1,0 +1,11 @@
+def maximum(mass):
+    maxi = 0
+    for i in range(1,kolvo):
+        if (mass[i] >= mass[i-1]):
+             maxi = i
+        for i in range(maxi + 1, kolvo):
+            mass[i] = 0
+        print(mass)
+kolvo = int(input('Введите кол-во элементов:'))
+mass = [float(i) for i in input('Введите числа через пробел:').split()]
+maximum(mass)
